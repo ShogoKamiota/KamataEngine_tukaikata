@@ -8,7 +8,8 @@ GameScene::GameScene() {}
 
 GameScene::~GameScene() {}
 
-void GameScene::Initialize() {
+void GameScene::Initialize()
+{
 
 	dxCommon_ = DirectXCommon::GetInstance();
 	input_ = Input::GetInstance();
