@@ -42,6 +42,20 @@ class GameScene {
 	/// </summary>
 	void Draw();
 
+  public:
+	//パーツID
+	enum PartId {
+		Root,		//大元
+		Spine,		//脊髄
+		Chest,		//胸
+		Head,		//頭
+		AlmL,		//左腕
+		AlmR,		//右腕
+		Hip,		//尻
+		LegL,		//左足
+		LegR,		//右足
+	};
+
   private: // メンバ変数
 	DirectXCommon* dxCommon_ = nullptr;
 	Input* input_ = nullptr;
@@ -55,7 +69,7 @@ class GameScene {
 	//3Dモデル
 	Model* model_ = nullptr;
 	//ワールドトランスフォーム
-	WorldTransform worldTransfrom_[100];
+	WorldTransform worldTransform_[100];
 	//ビュープロジェクション
 	ViewProjection viewProjection_;
 	//カメラ上方向の角度
